@@ -1,0 +1,18 @@
+*.bak
+*.dll
+*.pyc
+.*.swp
+*.*~*
+loopcoin-qt
+loopcoin-qt.exe
+src/loopcoind
+src/loopcoind.exe
+
+# Stuff created by the Qt build system.
+qrc_bitcoin.cpp
+build
+debug
+release
+/Makefile
+*.Debug
+*.Release
