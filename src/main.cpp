@@ -1852,7 +1852,7 @@ bool LoadBlockIndex(bool fAllowNew)
         //   vMerkleTree: 4a5e1e
 
         // Genesis block
-        const char* pszTimestamp = "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks";
+        const char* pszTimestamp = "ABC Online 01/08/2014 Barack Obama admits US officials 'tortured some folks' after 9/11 ahead of report on alleged CIA abuses";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -1864,13 +1864,13 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1231006505;
+        block.nTime    = 1407036918;
         block.nBits    = 0x1d00ffff;
         block.nNonce   = 2083236893;
 
         if (fTestNet)
         {
-            block.nTime    = 1296688602;
+            block.nTime    = 384568319;;
             block.nBits    = 0x1d07fff8;
             block.nNonce   = 384568319;
         }
