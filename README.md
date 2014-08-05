@@ -15,6 +15,8 @@ Technical
 
 The Bitcoin protocol is augmented with loopcoin operations, to reserve, register and update names.  In addition to DNS like entries, arbitrary name/value pairs are allowed and multiple namespaces will be available.  This will include a personal handle namespace mapping handles to public keys and personal address data.
 
+It should be used in conjunction with a DNS server.
+
 The protocol differences from bitcoin include:
 
 * Different blockchain, port, IRC bootstrap and message header
