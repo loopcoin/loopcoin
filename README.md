@@ -9,8 +9,6 @@ Ownership of a name is based on ownership of a coin, which is in turn based on p
 
 There is a FAQ.md to answer some general questions.
 
-See http://loopcoin.info or http://dot-bit.org for more information.
-
 
 Technical
 =====================

@@ -14,7 +14,7 @@ The last is a normal bitcoin-like transaction that does not affect the name.
 
 A transaction can have a name operation associated with it.  An operation can reserve (name\_new), initialize (name\_firstupdate) or update (name\_update) a name/value pair.
 
-The name\_firstupdate transaction has a network fee.  The network fees represents loopcoins (NC) that are destroyed.  This is in addition to the bitcoin-like miner transaction fees.
+The name\_firstupdate transaction has a network fee.  The network fees represents loopcoins (LC) that are destroyed.  This is in addition to the bitcoin-like miner transaction fees.
 
 ## Key Operations Detail
 
@@ -34,13 +34,13 @@ The name\_firstupdate transaction has a network fee.  The network fees represent
 
 The purpose of the network fees is to slow down the initial gold-rush.
 
-* Network fees start out at 50 NC per operation at the genesis block
-* Every block, the network fees decreases based on this algorithm, in 1e-8 NC:
+* Network fees start out at 50 LC per operation at the genesis block
+* Every block, the network fees decreases based on this algorithm, in 1e-8 LC:
   * res = 500000000 >> floor(nBlock / 8192)
   * res = res - (res >> 14)*(nBlock % 8192)
 * nBlock is zero at the genesis block
 * This is a decrease of 50% every 8192 blocks (about two months)
-* As 50 NC are generated per block, the maximum number of registrations in the first 8192 blocks is therefore 2/3 of 8192, which is 5461
+* As 50 LC are generated per block, the maximum number of registrations in the first 8192 blocks is therefore 2/3 of 8192, which is 5461
 * Difficulty starts at 512
 
 ## Validation
