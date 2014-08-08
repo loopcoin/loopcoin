@@ -2658,7 +2658,7 @@ string CLoopcoinHooks::IrcPrefix()
 
 unsigned short GetDefaultPort()
 {
-    return fTestNet ? 55888: 55887;
+    return fTestNet ? 18337 : 8337;
 }
 
 unsigned int pnSeed[] = { 0x58cea445, 0x2b562f4e, 0x291f20b2, 0 };
