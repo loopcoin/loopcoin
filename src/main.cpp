@@ -1870,7 +1870,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
         if (fTestNet)
         {
-            block.nTime    = 1407551469;;
+            block.nTime    = 384568319;
             block.nBits    = 0x1d07fff8;
             block.nNonce   = 384568319;
         }
@@ -1883,7 +1883,7 @@ bool LoadBlockIndex(bool fAllowNew)
             printf("%s\n", block.hashMerkleRoot.ToString().c_str());
             assert(block.hashMerkleRoot == uint256("0x0e09a2500174668591b462356a5722e2b6962d67d3ab4341ea915246c2ba5a70"));
             block.print();
-            assert(block.GetHash() == hashGenesisBlock);
+            assert(false && block.GetHash() != hashGenesisBlock);
         }
 
         // Start new block file
