@@ -1883,7 +1883,7 @@ bool LoadBlockIndex(bool fAllowNew)
             printf("%s\n", block.hashMerkleRoot.ToString().c_str());
             assert(block.hashMerkleRoot == uint256("0x0e09a2500174668591b462356a5722e2b6962d67d3ab4341ea915246c2ba5a70"));
             block.print();
-            assert(false && block.GetHash() != hashGenesisBlock);
+            assert(block.GetHash() == hashGenesisBlock);
         }
 
         // Start new block file
