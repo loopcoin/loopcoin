@@ -2595,9 +2595,9 @@ bool GenesisBlock(CBlock& block, int extra)
     block = CBlock();
     block.hashPrevBlock = 0;
     block.nVersion = 1;
-    block.nTime    = 1303000001;
+    block.nTime    = 1407036918;
     block.nBits    = 0x1c007fff;
-    block.nNonce   = 0xa21ea192U;
+    block.nNonce   = 2719916434;
     const char* pszTimestamp = "... choose what comes next.  Lives of your own, or a return to chains. -- V";
     CTransaction txNew;
     txNew.vin.resize(1);
@@ -2633,6 +2633,7 @@ int CLoopcoinHooks::LockinHeight()
 
 bool CLoopcoinHooks::Lockin(int nHeight, uint256 hash)
 {
+    return true;
     if (!fTestNet)
         if ((nHeight == 2016 && hash != uint256("0x0000000000660bad0d9fbde55ba7ee14ddf766ed5f527e3fbca523ac11460b92")) ||
                 (nHeight ==   4032 && hash != uint256("0x0000000000493b5696ad482deb79da835fe2385304b841beef1938655ddbc411")) ||
