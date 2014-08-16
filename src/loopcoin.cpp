@@ -2617,6 +2617,7 @@ bool GenesisBlock(CBlock& block, int extra)
 
 bool CLoopcoinHooks::GenesisBlock(CBlock& block)
 {
+    return false;
     if (fTestNet)
         return false;
 
@@ -2625,6 +2626,7 @@ bool CLoopcoinHooks::GenesisBlock(CBlock& block)
 
 int CLoopcoinHooks::LockinHeight()
 {
+    return 0;
     if (fTestNet)
         return 0;
 
@@ -2633,7 +2635,6 @@ int CLoopcoinHooks::LockinHeight()
 
 bool CLoopcoinHooks::Lockin(int nHeight, uint256 hash)
 {
-    return true;
     if (!fTestNet)
         if ((nHeight == 2016 && hash != uint256("0x0000000000660bad0d9fbde55ba7ee14ddf766ed5f527e3fbca523ac11460b92")) ||
                 (nHeight ==   4032 && hash != uint256("0x0000000000493b5696ad482deb79da835fe2385304b841beef1938655ddbc411")) ||
