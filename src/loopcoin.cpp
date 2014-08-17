@@ -2596,7 +2596,7 @@ bool GenesisBlock(CBlock& block, int extra)
     block.hashPrevBlock = 0;
     block.nVersion = 1;
     block.nTime    = 1407036918;
-    block.nBits    = 0x1c007fff;
+    block.nBits    = 0x1d07fff8;
     block.nNonce   = 2719916434;
     const char* pszTimestamp = "... choose what comes next.  Lives of your own, or a return to chains. -- V";
     CTransaction txNew;
