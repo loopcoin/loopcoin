@@ -32,7 +32,7 @@ map<COutPoint, CInPoint> mapNextTx;
 
 CMapBlockIndex mapBlockIndex;
 uint256 hashGenesisBlock("0x000000000062b72c5e2ceb45fbc8587e807c155b0da735e6483dfba2f0a9c770");
-CBigNum bnProofOfWorkLimit(~uint256(0) >> 32);
+CBigNum bnProofOfWorkLimit(~uint256(0) >> 28);
 const int nInitialBlockThreshold = 120; // Regard blocks up until N-threshold as "initial download"
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
