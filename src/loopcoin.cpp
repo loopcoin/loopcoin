@@ -2617,7 +2617,6 @@ bool GenesisBlock(CBlock& block, int extra)
 
 bool CLoopcoinHooks::GenesisBlock(CBlock& block)
 {
-    return false;
     if (fTestNet)
         return false;
 
