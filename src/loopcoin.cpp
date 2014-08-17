@@ -2634,9 +2634,6 @@ int CLoopcoinHooks::LockinHeight()
 
 bool CLoopcoinHooks::Lockin(int nHeight, uint256 hash)
 {
-    if (!fTestNet)
-        if ((nHeight == 0 && hash != uint256("0x000000000062b72c5e2ceb45fbc8587e807c155b0da735e6483dfba2f0a9c770")))
-        return false;
     return true;
 }
 
