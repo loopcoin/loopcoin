@@ -45,7 +45,7 @@ extern void rescanfornames();
 extern Value sendtoaddress(const Array& params, bool fHelp);
 
 const int NAME_COIN_GENESIS_EXTRA = 521;
-uint256 hashLoopCoinGenesisBlock("000000000062b72c5e2ceb45fbc8587e807c155b0da735e6483dfba2f0a9c770");
+uint256 hashLoopCoinGenesisBlock("bf5938ffdcc420e88e0aad8f31b87581914145e695a4327064dfe0be9e87877b");
 
 class CLoopcoinHooks : public CHooks
 {
@@ -93,24 +93,24 @@ public:
     {
         if (fTestNet)
             return 0;
-        return 19200;
+        return 0;
     }
 
     virtual int GetFullRetargetStartBlock()
     {
         if (fTestNet)
             return 0;
-        return 19200;
+        return 0;
     }
 
     string GetAlertPubkey1()
     {
-        return "04ba207043c1575208f08ea6ac27ed2aedd4f84e70b874db129acb08e6109a3bbb7c479ae22565973ebf0ac0391514511a22cb9345bdb772be20cfbd38be578b0c";
+        return "";
     }
 
     string GetAlertPubkey2()
     {
-        return "04fc4366270096c7e40adb8c3fcfbff12335f3079e5e7905bce6b1539614ae057ee1e61a25abdae4a7a2368505db3541cd81636af3f7c7afe8591ebc85b2a1acdd";
+        return "";
     }
 };
 
@@ -2617,6 +2617,7 @@ bool GenesisBlock(CBlock& block, int extra)
 
 bool CLoopcoinHooks::GenesisBlock(CBlock& block)
 {
+    return false;
     if (fTestNet)
         return false;
 

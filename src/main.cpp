@@ -31,8 +31,8 @@ unsigned int nTransactionsUpdated = 0;
 map<COutPoint, CInPoint> mapNextTx;
 
 CMapBlockIndex mapBlockIndex;
-uint256 hashGenesisBlock("0x000000000062b72c5e2ceb45fbc8587e807c155b0da735e6483dfba2f0a9c770");
-CBigNum bnProofOfWorkLimit(~uint256(0) >> 32);
+uint256 hashGenesisBlock("0xbf5938ffdcc420e88e0aad8f31b87581914145e695a4327064dfe0be9e87877b");
+CBigNum bnProofOfWorkLimit(~uint256(0) >> 28);
 const int nInitialBlockThreshold = 120; // Regard blocks up until N-threshold as "initial download"
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -1790,7 +1790,7 @@ bool LoadBlockIndex(bool fAllowNew)
 {
     if (fTestNet)
     {
-        hashGenesisBlock = uint256("0x9e387e392d6a3b595c4d061ce6d31db23c1e40b4bce6d92a95b852f6a2989600");
+        hashGenesisBlock = uint256("e4c5409acfa3ad9a5c76811598ff0de95c1c5f7e26ddb62ef3838b64b540b345");
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 28);
         pchMessageStart[0] = 0xfa;
         pchMessageStart[1] = 0xbf;
@@ -1885,6 +1885,7 @@ bool LoadBlockIndex(bool fAllowNew)
             block.print();
             assert(block.GetHash() == hashGenesisBlock);
         }
+         printf("\nHash Genesis Block \n%s\n", hashGenesisBlock.ToString().c_str());
 
         // Start new block file
         unsigned int nFile;

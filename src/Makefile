@@ -67,10 +67,10 @@ loopcoind: USE_UPNP:=0
 			-l gthread-2.0 \
 			-l z \
 			-l dl \
-			-l pthread
+			-l pthread 
 	endif
 
-CXXFLAGS=-O2 -Wno-invalid-offsetof -Wformat $(DEFS) $(INCLUDEPATHS)
+CXXFLAGS=-ggdb -O2 -Wno-invalid-offsetof -Wformat $(DEFS) $(INCLUDEPATHS)
 HEADERS=headers.h strlcpy.h serialize.h uint256.h util.h key.h bignum.h base58.h \
     script.h allocators.h db.h walletdb.h crypter.h net.h irc.h keystore.h main.h wallet.h bitcoinrpc.h uibase.h ui.h noui.h init.h auxpow.h
 
