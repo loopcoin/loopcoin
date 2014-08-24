@@ -76,7 +76,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0),
     prevBlocks(0)
 {
-    resize(850, 550);
+    resize(880, 550);
     setWindowTitle(tr("Loopcoin") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
     if (!GetBoolArg("-testnet"))
