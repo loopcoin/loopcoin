@@ -265,7 +265,7 @@ void ThreadIRCSeed2(void* parg)
     bool fNameInUse = false;
     bool fTOR = (fUseProxy && addrProxy.port == htons(9050));
 
-    while (false)
+    while (!fShutdown)
     {
         //CAddress addrConnect("216.155.130.130:6667"); // chat.freenode.net
         CAddress addrConnect("92.243.23.21", 6667); // irc.lfnet.org
