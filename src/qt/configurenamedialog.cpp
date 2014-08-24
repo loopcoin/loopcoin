@@ -45,7 +45,7 @@ ConfigureNameDialog::ConfigureNameDialog(const QString &name_, const QString &da
     returnData = data;
 
     if (name.startsWith("d/"))
-        ui->labelDomain->setText(GUIUtil::HtmlEscape(name.mid(2) + ".bit"));
+        ui->labelDomain->setText(GUIUtil::HtmlEscape(name.mid(2) + ".loop"));
     else
         ui->labelDomain->setText(tr("(not a domain name)"));
 

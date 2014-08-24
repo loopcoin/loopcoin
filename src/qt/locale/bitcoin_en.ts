@@ -878,7 +878,7 @@ p, li { white-space: pre-wrap; }
         <location line="+322"/>
         <source>The Loopcoin address to transfer
 the domain to, e.g.
-N1KHAL5C1CRzy58NdJwp1tbLze3XrkFxx9
+CSXz9vbjhkiAMpDERAU6QU5LnRUdqR6KYR
 
 Leave empty, if not needed.</source>
         <translation type="unfinished"></translation>
