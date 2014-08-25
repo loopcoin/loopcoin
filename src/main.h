@@ -797,18 +797,18 @@ public:
         /* If the version is not up-to-date (with the latest format change
            for this class), then it means we're upgrading and thus reading
            and old-format entry.  */
-        assert (nVersion >= 37500 || fRead);
+        assert (nVersion >= 1 || fRead);
 
-        if (nVersion < 37500)
+        if (nVersion < -1 )
           {
             assert (fRead);
             int nVersionDummy;
             READWRITE(nVersionDummy);
-            assert (nVersionDummy < 37500);
+            assert (nVersionDummy < -1 );
           }
         READWRITE(pos);
 
-        if (nVersion < 37500)
+        if (nVersion < -1 )
           {
             assert (fRead); 
             std::vector<CDiskTxPos> vSpent;
