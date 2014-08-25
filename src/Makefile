@@ -32,7 +32,7 @@ LIBS= \
    -l crypto
 
 loopcoin: USE_UPNP:=1
-	ifdef USE_UPNP
+	ifdef false
 		LIBS += -l miniupnpc
 		DEFS += -DUSE_UPNP=$(USE_UPNP)
 	endif
