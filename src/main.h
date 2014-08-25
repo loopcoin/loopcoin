@@ -1333,17 +1333,17 @@ public:
         /* If the version is not up-to-date (with the latest format change
            for this class), then it means we're upgrading and thus reading
            and old-format entry.  */
-        assert (nVersion >= 37500 || fRead);
+        assert (nVersion >= 1 || fRead);
 
         /* Previously, the version was stored in each entry.  This is
            now replaced with having serialisation version set.  In the old
            format, read and ignore the version.  */
-        if (nVersion < 37500)
+        if (nVersion < -1)
           {
             assert (fRead);
             int nDummyVersion;
             READWRITE(nDummyVersion);
-            assert (nDummyVersion < 37500);
+            assert (nDummyVersion < -1);
           }
 
         READWRITE(hashNext);
@@ -1360,7 +1360,7 @@ public:
         READWRITE(nNonce);
 
         /* In the old format, the auxpow is stored.  Load it and ignore.  */
-        if (nVersion < 37400)
+        if (nVersion < -1)
           {
             assert (fRead);
             boost::shared_ptr<CAuxPow> auxpow;
