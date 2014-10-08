@@ -2598,7 +2598,7 @@ bool GenesisBlock(CBlock& block, int extra)
     block.nTime    = 1303000001;
     block.nBits    = 0x1c007fff;
     block.nNonce   = 0xa21ea192U;
-    const char* pszTimestamp = "... choose what comes next.  Lives of your own, or a return to chains. -- V";
+    const char* pszTimestamp = "Carpe Diem - Horace;
     CTransaction txNew;
     txNew.vin.resize(1);
     txNew.vout.resize(1);
